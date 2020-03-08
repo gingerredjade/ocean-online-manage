@@ -1,0 +1,39 @@
+server:
+  port: 8888
+  tomcat:
+    uri-encoding: UTF-8
+    # tomcat虚拟路径
+    basedir: online/tomcat
+
+spring:
+  application:
+    name: ocean-online-manage
+  profiles:
+    include: info,mysql
+  cloud:
+    service-registry:
+      auto-registration:
+        enabled: true
+  thymeleaf:
+    mode: HTML5
+    cache: false
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+  messages:
+    encoding: UTF-8
+
+# 用户重置后的默认密码
+default:
+  user:
+    password: 111111
+
+# data catalog
+data:
+  catalog: D:/testData1/
+
+# picture configure
+preread:
+  upload-path: E:/ocean-online-manage/preview/
